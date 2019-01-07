@@ -31,8 +31,10 @@ function showProgress() {
 };
 
 function showScores() {
-	var gameOverHtml = "<h1>Results</h1>";
-  gameOverHtml += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
+	var gameOverHtml = "<div id='gameOver'><h1>Results</h1>";
+  gameOverHtml += "<h2 id='score'> Your Score: " + quiz.score + "/" + quiz.questions.length + "</h2>";
+  gameOverHtml += "<p>Learn more <a href='https://www.musictheory.net/' target='_blank'>here</a>!</p>"
+  gameOverHtml += "<p><a href='#' onclick='window.location.reload(true);'>Try Again?</p></div>"
   var element = document.getElementById("quiz");
   element.innerHTML = gameOverHtml;
 };
